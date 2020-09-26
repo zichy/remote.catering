@@ -1,0 +1,100 @@
+$fonts: Arial, sans-serif
+$color1: #FFBF81
+$color2: #FF69EB
+$color3: #FFA3A5
+$color4: #FFDC5E
+$color5: #FF86C8
+
+html
+	*
+		position: relative
+
+body
+	font-family: $fonts
+	margin: 0
+
+	background-color: gray
+
+	& > header, & > article, & > footer
+		min-height: 300px
+		padding-top: 80px
+		padding-bottom: 80px
+		width: 100%
+		display:flex
+		justify-content:center
+		align-items:center
+		position: relative
+
+
+	h2
+		font-size: 4rem
+
+	font-size: 1.2em
+
+header
+	// min-height: 400px
+	// max-height: 400px
+
+
+	#header-bg
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+
+		display: flex
+		align-items: center
+
+		#blobs
+			height: 100%
+			width: 100%
+			display: flex
+			align-items: center
+
+
+	#header-content
+
+		text-align: right
+		position: relative
+
+	#header-bg
+		z-index: -1
+		background-color: $color1
+
+
+	h1
+		color: black
+		text-shadow: .1em .1em 0 #FFF
+		font-size: 6rem
+
+	#claim
+		font-size: 2rem
+		line-height: 1.5em
+
+
+footer
+	a[href^="mailto"]::before
+		content: "📧  "
+
+	a
+		font-style: normal
+
+#concept
+	background-color: $color2
+
+#testimonials
+	background-color: $color3
+	text-align: right
+
+#contact
+	background-color: $color4
+	text-align: center
+
+.content
+	// TODO: mobile
+	padding-left: 20%
+	padding-right: 20%
+	width: 60%
