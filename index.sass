@@ -12,27 +12,37 @@ html
 body
 	font-family: $fonts
 	margin: 0
-
 	background-color: gray
 
+	font-size: 1.3rem
+	line-height: 1.4
+
+	@media screen and (max-width: 768px) and (min-width: 400px)
+		font-size: 0.95rem
+
+	@media screen and (max-width: 400px)
+		font-size: 0.85rem
+
 	& > header, & > article, & > footer
+		box-sizing: border-box
 		min-height: 300px
 		padding-top: 80px
 		padding-bottom: 80px
 		width: 100%
 		position: relative
 
-
 	h2
-		font-size: 4rem
+		font-size: 3em
 		overflow-wrap: break-word
 
-	font-size: 1.2em
-
 header
-	// min-height: 400px
-	// max-height: 400px
+	font-size: 1rem
 
+	@media screen and (max-width: 768px) and (min-width: 400px)
+		font-size: 0.6rem
+
+	@media screen and (max-width: 400px)
+		font-size: 0.44rem
 
 	#header-bg
 		width: 100%
@@ -42,7 +52,7 @@ header
 		left: 0
 		bottom: 0
 		right: 0
-
+		overflow: hidden
 		display: flex
 		align-items: center
 
@@ -69,20 +79,23 @@ header
 		text-align: right
 		position: relative
 
+		@media screen and (max-width: 768px)
+			padding-left: 0
+
 	#header-bg
 		z-index: -1
 		background-color: $color1
 
-
 	h1
 		color: black
 		text-shadow: .1em .1em 0 #FFF
-		font-size: 6rem
+		font-size: 6em
 		overflow-wrap: break-word
+		line-height: 1.2
 
 	#claim
-		font-size: 2rem
-		line-height: 1.5em
+		font-size: 2em
+		line-height: 1.5
 
 
 @keyframes move 
@@ -120,18 +133,14 @@ footer
 	@media screen and (min-width: 768px)
 		padding-left: 20%
 		padding-right: 20%
-		width: 60%
-
 
 	@media screen and (max-width: 768px) and (min-width: 400px)
 		padding-left: 10%
 		padding-right: 10%
-		width: 80%
 
 	@media screen and (max-width: 400px)
 		padding-left: 2em
 		padding-right: 2em
-		width: calc(80% - 4em)
 
 .left
 	text-align: left
