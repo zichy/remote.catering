@@ -14,7 +14,8 @@ body {
     width: 100%;
     position: relative; }
   body h2 {
-    font-size: 4rem; }
+    font-size: 4rem;
+    overflow-wrap: break-word; }
 
 header #header-bg {
   width: 100%;
@@ -43,7 +44,8 @@ header #header-bg {
 header h1 {
   color: black;
   text-shadow: .1em .1em 0 #FFF;
-  font-size: 6rem; }
+  font-size: 6rem;
+  overflow-wrap: break-word; }
 
 header #claim {
   font-size: 2rem;
@@ -81,7 +83,7 @@ footer a {
   .content {
     padding-left: 2em;
     padding-right: 2em;
-    width: 80%; } }
+    width: calc(80% - 4em); } }
 
 .left {
   text-align: left; }
