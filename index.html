@@ -21,7 +21,7 @@
 
 			<div class="content" id="header-content">
 				<h1>
-					remote veranstaltung? remote catering!
+					remote<br><span id="heading-word">veranstaltung</span>?<br>remote catering!
 				</h1>
 				<div id="claim">
 					den stress aus dem konferenz&shy;homeoffice nehmen - catering zu den teilnehmer&shy;innen nach hause
@@ -74,5 +74,23 @@
 				<a href="mailto:hej@remote.catering">hej@remote.catering</a>
 			</address>
 		</footer>
+
+		<script>
+			function rand(min, max) {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min +1)) + min;
+			}
+			var word = document.getElementById('heading-word');
+			var dict = ['konferenz', 'veranstaltung', 'meeting', 'summit', 'schulung'];
+			var i = 0;
+			var swap = function() {
+				i++;
+				if (i >= dict.length) i = 0;
+				word.innerHTML = dict[i];
+				setTimeout(swap, rand(1500, 3500));
+			};
+			setTimeout(swap, rand(1500, 3500));
+		</script>
 	</body>
 </html>
