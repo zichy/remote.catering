@@ -1,21 +1,25 @@
 @charset "UTF-8";
 html * {
-  position: relative; }
+  position: relative;
+}
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: gray;
-  font-size: 1.2em; }
-  body > header, body > article, body > footer {
-    min-height: 300px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    width: 100%;
-    position: relative; }
-  body h2 {
-    font-size: 4rem;
-    overflow-wrap: break-word; }
+  font-size: 1.2em;
+}
+body > header, body > article, body > footer {
+  min-height: 300px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+  position: relative;
+}
+body h2 {
+  font-size: 4rem;
+  overflow-wrap: break-word;
+}
 
 header #header-bg {
   width: 100%;
@@ -26,78 +30,126 @@ header #header-bg {
   bottom: 0;
   right: 0;
   display: flex;
-  align-items: center; }
-  header #header-bg #blobs {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center; }
-
+  align-items: center;
+}
+header #header-bg #blobs {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header #header-bg #blobs svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vmax;
+  z-index: -1;
+  animation: move 120s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+header #header-bg #blobs svg:nth-of-type(1) {
+  animation-delay: 10s;
+  animation-direction: alternate-reverse;
+}
 header #header-content {
   text-align: right;
-  position: relative; }
-
+  position: relative;
+}
 header #header-bg {
   z-index: -1;
-  background-color: #FFBF81; }
-
+  background-color: #FFBF81;
+}
 header h1 {
   color: black;
-  text-shadow: .1em .1em 0 #FFF;
+  text-shadow: 0.1em 0.1em 0 #FFF;
   font-size: 6rem;
-  overflow-wrap: break-word; }
-
+  overflow-wrap: break-word;
+}
 header #claim {
   font-size: 2rem;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+}
 
-footer a[href^="mailto"]::before {
-  content: "📧  "; }
-
+@keyframes move {
+  0% {
+    transform: scale(1) translate(10px, -30px);
+  }
+  38% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  40% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  78% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  80% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) translate(10px, -30px);
+  }
+}
+footer a[href^=mailto]::before {
+  content: "📧  ";
+}
 footer a {
-  font-style: normal; }
+  font-style: normal;
+}
 
 #concept {
-  background-color: #FF69EB; }
+  background-color: #FF69EB;
+}
 
 #testimonials {
-  background-color: #FFA3A5; }
+  background-color: #FFA3A5;
+}
 
 #contact {
   background-color: #FFDC5E;
-  text-align: center; }
+  text-align: center;
+}
 
 @media screen and (min-width: 768px) {
   .content {
     padding-left: 20%;
     padding-right: 20%;
-    width: 60%; } }
-
+    width: 60%;
+  }
+}
 @media screen and (max-width: 768px) and (min-width: 400px) {
   .content {
     padding-left: 10%;
     padding-right: 10%;
-    width: 80%; } }
-
+    width: 80%;
+  }
+}
 @media screen and (max-width: 400px) {
   .content {
     padding-left: 2em;
     padding-right: 2em;
-    width: calc(80% - 4em); } }
+    width: calc(80% - 4em);
+  }
+}
 
 .left {
-  text-align: left; }
+  text-align: left;
+}
 
 .right {
-  text-align: right; }
+  text-align: right;
+}
 
 .center {
-  text-align: center; }
+  text-align: center;
+}
 
 .block-right {
   text-align: left;
-  padding-left: 20%; }
+  padding-left: 20%;
+}
 
 .block-left {
   text-align: left;
-  padding-right: 20%; }
+  padding-right: 20%;
+}
