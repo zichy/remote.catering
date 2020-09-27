@@ -122,11 +122,25 @@ header #claim {
     transform: scale(1) translate(10px, -30px);
   }
 }
-footer a[href^=mailto]::before {
-  content: "📧  ";
-}
 footer a {
   font-style: normal;
+}
+
+footer#contact address {
+  padding-top: 1.5em;
+}
+footer#contact a {
+  font-style: normal;
+  display: inline-block;
+  padding: 1.2em 1.2em 1.1em;
+  background: #FF2C5F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5em;
+  border-bottom: 3px solid #3B0E13;
+}
+footer#contact a::before {
+  content: "📧  ";
 }
 
 #concept {
