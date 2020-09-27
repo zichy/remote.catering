@@ -75,3 +75,13 @@ footer a {
 
 .right {
   text-align: right; }
+
+.center {
+  text-align: center; }
+
+.block-right {
+  text-align: left;
+  padding-left: 20%; }
+
+.block-left {
+  padding-right: 20%; }
