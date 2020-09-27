@@ -142,6 +142,9 @@ footer#contact a {
 footer#contact a::before {
   content: "📧  ";
 }
+footer#contact a:hover {
+  background: #EB115D;
+}
 
 #concept {
   background-color: #FF69EB;
