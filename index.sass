@@ -1,9 +1,13 @@
-$fonts: Arial, sans-serif
-$color1: #FFBF81
-$color2: #FF69EB
-$color3: #FFA3A5
-$color4: #FFDC5E
-$color5: #FF86C8
+$fonts: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif
+$color1: #fc8a76
+$color2: #fdb57a
+$color3: #fede7f
+$color4: #f8fe83
+$color5: #605ae6
+
+@font-face
+	font-family: 'Inter'
+	src: url('fonts/inter/Inter-VariableFont_slnt,wght.ttf')
 
 html
 	*
@@ -23,10 +27,9 @@ body
 	@media screen and (max-width: 400px)
 		font-size: 0.85rem
 
-	& > header, & > article, & > footer
+	& > header, & > main > section, & > footer
 		box-sizing: border-box
-		min-height: 300px
-		padding-top: 80px
+		min-height: 20em
 		padding-bottom: 80px
 		width: 100%
 		position: relative
@@ -80,7 +83,8 @@ header
 		position: relative
 
 		@media screen and (max-width: 768px)
-			padding-left: 0
+			#heading-word
+				margin-left: -2rem
 
 	#header-bg
 		z-index: -1
@@ -124,8 +128,8 @@ footer#contact
 		font-style: normal
 		display: inline-block
 		padding: 1.2em 1.2em 1.1em
-		background: $color2
-		color: black
+		background: $color5
+		color: white
 		text-decoration: none
 		border-radius: 0.5em
 		border-bottom: 3px solid #3B0E13
@@ -134,7 +138,7 @@ footer#contact
 			content: "📧  "
 
 		&:hover
-			background: darken($color2, 5%)
+			background: darken($color5, 5%)
 
 #concept
 	background-color: $color2
@@ -146,18 +150,15 @@ footer#contact
 	background-color: $color4
 	text-align: center
 
-.content
-	@media screen and (min-width: 768px)
-		padding-left: 20%
-		padding-right: 20%
+.content__inner
+	max-width: 48rem
+	margin: 0 auto
+	padding: 2rem
 
-	@media screen and (max-width: 768px) and (min-width: 400px)
-		padding-left: 10%
-		padding-right: 10%
-
-	@media screen and (max-width: 400px)
-		padding-left: 2em
-		padding-right: 2em
+.header__inner
+	max-width: 72rem
+	margin: 0 auto
+	padding: 2rem
 
 .left
 	text-align: left
@@ -168,10 +169,8 @@ footer#contact
 .center
 	text-align: center
 
-.block-right
-	text-align: left
-	padding-left: 20%
+blockquote
+	margin: .5rem 0
 
-.block-left
-	text-align: left
-	padding-right: 20%
+figure
+	margin: 0

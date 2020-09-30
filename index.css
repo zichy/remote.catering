@@ -1,9 +1,13 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Inter';
+  src: url("fonts/inter/Inter-VariableFont_slnt,wght.ttf"); }
+
 html * {
   position: relative; }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   background-color: gray;
   font-size: 1.3rem;
@@ -14,10 +18,9 @@ body {
   @media screen and (max-width: 400px) {
     body {
       font-size: 0.85rem; } }
-  body > header, body > article, body > footer {
+  body > header, body > main > section, body > footer {
     box-sizing: border-box;
-    min-height: 300px;
-    padding-top: 80px;
+    min-height: 20em;
     padding-bottom: 80px;
     width: 100%;
     position: relative; }
@@ -64,11 +67,11 @@ header {
     text-align: right;
     position: relative; }
     @media screen and (max-width: 768px) {
-      header #header-content {
-        padding-left: 0; } }
+      header #header-content #heading-word {
+        margin-left: -2rem; } }
   header #header-bg {
     z-index: -1;
-    background-color: #FFBF81; }
+    background-color: #fc8a76; }
   header h1 {
     color: black;
     text-shadow: .1em .1em 0 #FFF;
@@ -103,40 +106,35 @@ footer#contact a {
   font-style: normal;
   display: inline-block;
   padding: 1.2em 1.2em 1.1em;
-  background: #FF69EB;
-  color: black;
+  background: #605ae6;
+  color: white;
   text-decoration: none;
   border-radius: 0.5em;
   border-bottom: 3px solid #3B0E13; }
   footer#contact a::before {
     content: "📧  "; }
   footer#contact a:hover {
-    background: #ff50e8; }
+    background: #4b44e3; }
 
 #concept {
-  background-color: #FF69EB; }
+  background-color: #fdb57a; }
 
 #testimonials {
-  background-color: #FFA3A5; }
+  background-color: #fede7f; }
 
 #contact {
-  background-color: #FFDC5E;
+  background-color: #f8fe83;
   text-align: center; }
 
-@media screen and (min-width: 768px) {
-  .content {
-    padding-left: 20%;
-    padding-right: 20%; } }
+.content__inner {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem; }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
-  .content {
-    padding-left: 10%;
-    padding-right: 10%; } }
-
-@media screen and (max-width: 400px) {
-  .content {
-    padding-left: 2em;
-    padding-right: 2em; } }
+.header__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem; }
 
 .left {
   text-align: left; }
@@ -147,10 +145,8 @@ footer#contact a {
 .center {
   text-align: center; }
 
-.block-right {
-  text-align: left;
-  padding-left: 20%; }
+blockquote {
+  margin: .5rem 0; }
 
-.block-left {
-  text-align: left;
-  padding-right: 20%; }
+figure {
+  margin: 0; }
